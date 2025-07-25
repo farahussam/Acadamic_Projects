@@ -1,0 +1,22 @@
+# Multivariate Data Analysis
+
+## Overview
+This project was completed as part of the Multivariate Data Analysis course at Cairo University in January 2025. It analyzes FIFA player data to uncover performance patterns and positional insights using advanced statistical techniques.
+
+## Objectives
+- Identify performance patterns and classify player positions based on skill attributes.
+- Explore latent variables using Exploratory Factor Analysis (EFA).
+- Conduct hypothesis testing to examine salary disparities across positions.
+
+## Methodology
+- Applied discriminant analysis, achieving 88% accuracy in classifying player positions.
+- Used EFA to reveal underlying factors affecting physical performance.
+- Performed statistical tests to confirm higher average wages for forwards.
+
+## Technologies
+- **Tools**: R
+- **Techniques**: Multivariate Analysis, Discriminant Analysis, Hypothesis Testing
+
+## Results
+- Achieved 88% accuracy in position classification.
+- Identified statistically significant salary disparities.
