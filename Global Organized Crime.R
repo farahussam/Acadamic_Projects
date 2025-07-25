@@ -214,27 +214,24 @@ cat("Average silhouette width:", avg_sil_width, "\n")
 
 # Plot silhouette plot
 plot(sil_scores, col = c("darkred"), border = NA, main = "silhouette plot")
-# تحميل الباكجات الضرورية
-install.packages(c("ggplot2", "rnaturalearth", "rnaturalearthdata", "dplyr"))
-library(ggplot2)
+
 library(rnaturalearth)
 library(rnaturalearthdata)
-library(dplyr)
 
-# 1. بيانات الخريطة العالمية
+
+# 1. 
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
-# 2. بيانات الكلاستر بتاعتك (اكتبيها أو استورديها)
-# مثال بسيط:
+# 2. 
 cluster_data <- data.frame(
   name = row.names(crime),
   cluster = crime$cluster
 )
 
-# 3. دمج بيانات الخريطة مع بيانات الكلاستر
+# 3. 
 world_clusters <- left_join(world, cluster_data, by = c("name"))
 
-# 4. رسم الخريطة
+# 4. 
 ggplot(world_clusters) +
   geom_sf(aes(fill = factor(cluster)), color = "black", size = 0.1) +
   scale_fill_manual(values = c("gold", "tomato", "darkred"),
@@ -265,4 +262,3 @@ actual <- test$cluster
 predictions <- predict(fit, newdata = test)
 library(caret)
 confusionMatrix(actual,predictions)
-
