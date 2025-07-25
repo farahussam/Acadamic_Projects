@@ -12,7 +12,7 @@ library(class)
 library(MASS)
 library(pROC)
 #####load data####
-fifa <- read.csv("/Users/marymarzouk/Desktop/untitled folder/fifa_players.csv")
+fifa <- read.csv("fifa_players.csv")
 #####missing values####
 dim(fifa) #dataset dimensions
 colSums(is.na(fifa)) #count missing values in each column
